@@ -1,0 +1,158 @@
+MACRO RA1SHD8192X32
+  PIN A[0]
+    AntennaGateArea  0.0792 ;
+  END A[0]
+  PIN A[10]
+    AntennaGateArea  0.0792 ;
+  END A[10]
+  PIN A[11]
+    AntennaGateArea  0.0792 ;
+  END A[11]
+  PIN A[12]
+    AntennaGateArea  0.0792 ;
+  END A[12]
+  PIN A[1]
+    AntennaGateArea  0.0792 ;
+  END A[1]
+  PIN A[2]
+    AntennaGateArea  0.0792 ;
+  END A[2]
+  PIN A[3]
+    AntennaGateArea  0.0792 ;
+  END A[3]
+  PIN A[4]
+    AntennaGateArea  0.0792 ;
+  END A[4]
+  PIN A[5]
+    AntennaGateArea  0.0792 ;
+  END A[5]
+  PIN A[6]
+    AntennaGateArea  0.0792 ;
+  END A[6]
+  PIN A[7]
+    AntennaGateArea  0.0792 ;
+  END A[7]
+  PIN A[8]
+    AntennaGateArea  0.0792 ;
+  END A[8]
+  PIN A[9]
+    AntennaGateArea  0.0792 ;
+  END A[9]
+  PIN CEN
+    AntennaGateArea  0.0792 ;
+  END CEN
+  PIN CLK
+    AntennaGateArea  0.0792 ;
+  END CLK
+  PIN D[0]
+    AntennaGateArea  0.0792 ;
+  END D[0]
+  PIN D[10]
+    AntennaGateArea  0.0792 ;
+  END D[10]
+  PIN D[11]
+    AntennaGateArea  0.0792 ;
+  END D[11]
+  PIN D[12]
+    AntennaGateArea  0.0792 ;
+  END D[12]
+  PIN D[13]
+    AntennaGateArea  0.0792 ;
+  END D[13]
+  PIN D[14]
+    AntennaGateArea  0.0792 ;
+  END D[14]
+  PIN D[15]
+    AntennaGateArea  0.0792 ;
+  END D[15]
+  PIN D[16]
+    AntennaGateArea  0.0792 ;
+  END D[16]
+  PIN D[17]
+    AntennaGateArea  0.0792 ;
+  END D[17]
+  PIN D[18]
+    AntennaGateArea  0.0792 ;
+  END D[18]
+  PIN D[19]
+    AntennaGateArea  0.0792 ;
+  END D[19]
+  PIN D[1]
+    AntennaGateArea  0.0792 ;
+  END D[1]
+  PIN D[20]
+    AntennaGateArea  0.0792 ;
+  END D[20]
+  PIN D[21]
+    AntennaGateArea  0.0792 ;
+  END D[21]
+  PIN D[22]
+    AntennaGateArea  0.0792 ;
+  END D[22]
+  PIN D[23]
+    AntennaGateArea  0.0792 ;
+  END D[23]
+  PIN D[24]
+    AntennaGateArea  0.0792 ;
+  END D[24]
+  PIN D[25]
+    AntennaGateArea  0.0792 ;
+  END D[25]
+  PIN D[26]
+    AntennaGateArea  0.0792 ;
+  END D[26]
+  PIN D[27]
+    AntennaGateArea  0.0792 ;
+  END D[27]
+  PIN D[28]
+    AntennaGateArea  0.0792 ;
+  END D[28]
+  PIN D[29]
+    AntennaGateArea  0.0792 ;
+  END D[29]
+  PIN D[2]
+    AntennaGateArea  0.0792 ;
+  END D[2]
+  PIN D[30]
+    AntennaGateArea  0.0792 ;
+  END D[30]
+  PIN D[31]
+    AntennaGateArea  0.0792 ;
+  END D[31]
+  PIN D[3]
+    AntennaGateArea  0.0792 ;
+  END D[3]
+  PIN D[4]
+    AntennaGateArea  0.0792 ;
+  END D[4]
+  PIN D[5]
+    AntennaGateArea  0.0792 ;
+  END D[5]
+  PIN D[6]
+    AntennaGateArea  0.0792 ;
+  END D[6]
+  PIN D[7]
+    AntennaGateArea  0.0792 ;
+  END D[7]
+  PIN D[8]
+    AntennaGateArea  0.0792 ;
+  END D[8]
+  PIN D[9]
+    AntennaGateArea  0.0792 ;
+  END D[9]
+  PIN OEN
+    AntennaGateArea  0.0792 ;
+  END OEN
+  PIN WEN[0]
+    AntennaGateArea  0.0792 ;
+  END WEN[0]
+  PIN WEN[1]
+    AntennaGateArea  0.0792 ;
+  END WEN[1]
+  PIN WEN[2]
+    AntennaGateArea  0.0792 ;
+  END WEN[2]
+  PIN WEN[3]
+    AntennaGateArea  0.0792 ;
+  END WEN[3]
+END RA1SHD8192X32

@@ -1,0 +1,262 @@
+//
+//      CONFIDENTIAL  AND  PROPRIETARY SOFTWARE OF ARM Physical IP, INC.
+//      
+//      Copyright (c) 1993-2002  ARM Physical IP, Inc.  All  Rights Reserved.
+//      
+//      Use of this Software is subject to the terms and conditions  of the
+//      applicable license agreement with ARM Physical IP, Inc.  In addition,
+//      this Software is protected by patents, copyright law and international
+//      treaties.
+//      
+//      The copyright notice(s) in this Software does not indicate actual or
+//      intended publication of this Software.
+//      
+//      name:			High Speed/Density Single-Port SRAM
+//           			SMIC 0.18um Logic018 Process
+//      version:		2005Q3V1
+//      comment:		
+//      configuration:	 -instname RA1SHD2048X64 -words 2048 -bits 64 -frequency 20 -ring_width 2 -mux 8 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+//
+//      Tetramax model for Synchronous Single-Port Ram
+//
+//      Instance Name:  RA1SHD2048X64
+//      Words:          2048
+//      Word Width:     64
+//      Pipeline:       No
+//
+//      Creation Date:  2002-06-03 12:18:18Z
+//      Verified With: TetraMax 2002.05
+//
+//      Modeling Assumptions: This model is for use by only TetraMax ATPG tool.
+//      It is not intended to be used by any Verilog Simulator.
+//
+//      Modeling Limitations: These models have limited functionality and x
+//      handling as defined by the TetraMax modelling guidelines. These models are
+//      developed on Verilog syntax but they don't fully represent the 
+//      functionality of the memory models as they are restricted by the ATPG tool.
+//      During the read/write  contention the memory location is
+//      written with correct data but the outputs are set to "X".
+//      During the write/write contention the memory location is written with "X" data and
+//      the outputs are set to "X". The tetramax 2001.08 will generate wrong ATPG
+//      vectors for dual port RAM if full sequential ATPG engine is used. We have used
+//      fast sequential ATPG engine for verification of all the memories on
+//      recommendation from Synopsys Tetramax expert. The models have been tested 
+//      by generating the ATPG vectors and simulating them as well as running functional 
+//      vectors through tetramax logical simulation engine.
+//
+//      Known Bugs: None.
+//
+//      Known Work Arounds: N/A
+//
+`timescale 1 ns/1 ps
+module ds_RA1SHD2048X64 (q, s1, s2, d2, d3, clk);
+  output q;
+  input s1,s2,d2,d3,clk;
+  _MUX m2 (s2, d3, d2, n2);
+  _MUX m1 (s1, n2, q, n1);
+  _DFF r1 (1'b0, 1'b0, clk, n1, q);
+endmodule
+`celldefine
+`define read_write new
+
+module RA1SHD2048X64 (
+   Q,
+   CLK,
+   CEN,
+   WEN,
+   A,
+   D,
+   OEN
+);
+   parameter		   BITS = 64;
+   parameter		   word_depth = 2048;
+   parameter		   addr_width = 11;
+   parameter               mask_width = 8 ;
+   parameter               wp_size    = 8 ;
+//PORT_NAMES
+   output [63:0] Q;
+   reg [63:0] Q;
+   input CLK;
+   input CEN;
+   input [7:0] WEN;
+   input [10:0] A;
+   input [63:0] D;
+   input OEN;
+   reg [7:0]	   mem0 [word_depth-1:0];
+   reg [15:8]	   mem1 [word_depth-1:0];
+   reg [23:16]	   mem2 [word_depth-1:0];
+   reg [31:24]	   mem3 [word_depth-1:0];
+   reg [39:32]	   mem4 [word_depth-1:0];
+   reg [47:40]	   mem5 [word_depth-1:0];
+   reg [55:48]	   mem6 [word_depth-1:0];
+   reg [63:56]	   mem7 [word_depth-1:0];
+   reg [63:0] iQ;
+   reg [63:0] intQ;
+
+event write_event;
+supply1 vdd;
+
+   not (NOT_CEN, CEN);
+   not (NOT_WEN0, WEN[0]);
+   and (RW_BOTH0,NOT_WEN0, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH0 ) begin mem0[A]=D[7:0]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[7:0]=mem0[A];
+   ds_RA1SHD2048X64 (.q(intQ[0]), .s1(CEN), .s2(RW_BOTH0), .d2(D[0]), .d3(iQ[0]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[1]), .s1(CEN), .s2(RW_BOTH0), .d2(D[1]), .d3(iQ[1]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[2]), .s1(CEN), .s2(RW_BOTH0), .d2(D[2]), .d3(iQ[2]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[3]), .s1(CEN), .s2(RW_BOTH0), .d2(D[3]), .d3(iQ[3]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[4]), .s1(CEN), .s2(RW_BOTH0), .d2(D[4]), .d3(iQ[4]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[5]), .s1(CEN), .s2(RW_BOTH0), .d2(D[5]), .d3(iQ[5]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[6]), .s1(CEN), .s2(RW_BOTH0), .d2(D[6]), .d3(iQ[6]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[7]), .s1(CEN), .s2(RW_BOTH0), .d2(D[7]), .d3(iQ[7]), .clk(CLK)); 
+   not (NOT_WEN1, WEN[1]);
+   and (RW_BOTH1,NOT_WEN1, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH1 ) begin mem1[A]=D[15:8]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[15:8]=mem1[A];
+   ds_RA1SHD2048X64 (.q(intQ[8]), .s1(CEN), .s2(RW_BOTH1), .d2(D[8]), .d3(iQ[8]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[9]), .s1(CEN), .s2(RW_BOTH1), .d2(D[9]), .d3(iQ[9]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[10]), .s1(CEN), .s2(RW_BOTH1), .d2(D[10]), .d3(iQ[10]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[11]), .s1(CEN), .s2(RW_BOTH1), .d2(D[11]), .d3(iQ[11]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[12]), .s1(CEN), .s2(RW_BOTH1), .d2(D[12]), .d3(iQ[12]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[13]), .s1(CEN), .s2(RW_BOTH1), .d2(D[13]), .d3(iQ[13]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[14]), .s1(CEN), .s2(RW_BOTH1), .d2(D[14]), .d3(iQ[14]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[15]), .s1(CEN), .s2(RW_BOTH1), .d2(D[15]), .d3(iQ[15]), .clk(CLK)); 
+   not (NOT_WEN2, WEN[2]);
+   and (RW_BOTH2,NOT_WEN2, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH2 ) begin mem2[A]=D[23:16]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[23:16]=mem2[A];
+   ds_RA1SHD2048X64 (.q(intQ[16]), .s1(CEN), .s2(RW_BOTH2), .d2(D[16]), .d3(iQ[16]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[17]), .s1(CEN), .s2(RW_BOTH2), .d2(D[17]), .d3(iQ[17]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[18]), .s1(CEN), .s2(RW_BOTH2), .d2(D[18]), .d3(iQ[18]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[19]), .s1(CEN), .s2(RW_BOTH2), .d2(D[19]), .d3(iQ[19]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[20]), .s1(CEN), .s2(RW_BOTH2), .d2(D[20]), .d3(iQ[20]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[21]), .s1(CEN), .s2(RW_BOTH2), .d2(D[21]), .d3(iQ[21]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[22]), .s1(CEN), .s2(RW_BOTH2), .d2(D[22]), .d3(iQ[22]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[23]), .s1(CEN), .s2(RW_BOTH2), .d2(D[23]), .d3(iQ[23]), .clk(CLK)); 
+   not (NOT_WEN3, WEN[3]);
+   and (RW_BOTH3,NOT_WEN3, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH3 ) begin mem3[A]=D[31:24]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[31:24]=mem3[A];
+   ds_RA1SHD2048X64 (.q(intQ[24]), .s1(CEN), .s2(RW_BOTH3), .d2(D[24]), .d3(iQ[24]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[25]), .s1(CEN), .s2(RW_BOTH3), .d2(D[25]), .d3(iQ[25]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[26]), .s1(CEN), .s2(RW_BOTH3), .d2(D[26]), .d3(iQ[26]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[27]), .s1(CEN), .s2(RW_BOTH3), .d2(D[27]), .d3(iQ[27]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[28]), .s1(CEN), .s2(RW_BOTH3), .d2(D[28]), .d3(iQ[28]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[29]), .s1(CEN), .s2(RW_BOTH3), .d2(D[29]), .d3(iQ[29]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[30]), .s1(CEN), .s2(RW_BOTH3), .d2(D[30]), .d3(iQ[30]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[31]), .s1(CEN), .s2(RW_BOTH3), .d2(D[31]), .d3(iQ[31]), .clk(CLK)); 
+   not (NOT_WEN4, WEN[4]);
+   and (RW_BOTH4,NOT_WEN4, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH4 ) begin mem4[A]=D[39:32]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[39:32]=mem4[A];
+   ds_RA1SHD2048X64 (.q(intQ[32]), .s1(CEN), .s2(RW_BOTH4), .d2(D[32]), .d3(iQ[32]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[33]), .s1(CEN), .s2(RW_BOTH4), .d2(D[33]), .d3(iQ[33]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[34]), .s1(CEN), .s2(RW_BOTH4), .d2(D[34]), .d3(iQ[34]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[35]), .s1(CEN), .s2(RW_BOTH4), .d2(D[35]), .d3(iQ[35]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[36]), .s1(CEN), .s2(RW_BOTH4), .d2(D[36]), .d3(iQ[36]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[37]), .s1(CEN), .s2(RW_BOTH4), .d2(D[37]), .d3(iQ[37]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[38]), .s1(CEN), .s2(RW_BOTH4), .d2(D[38]), .d3(iQ[38]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[39]), .s1(CEN), .s2(RW_BOTH4), .d2(D[39]), .d3(iQ[39]), .clk(CLK)); 
+   not (NOT_WEN5, WEN[5]);
+   and (RW_BOTH5,NOT_WEN5, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH5 ) begin mem5[A]=D[47:40]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[47:40]=mem5[A];
+   ds_RA1SHD2048X64 (.q(intQ[40]), .s1(CEN), .s2(RW_BOTH5), .d2(D[40]), .d3(iQ[40]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[41]), .s1(CEN), .s2(RW_BOTH5), .d2(D[41]), .d3(iQ[41]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[42]), .s1(CEN), .s2(RW_BOTH5), .d2(D[42]), .d3(iQ[42]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[43]), .s1(CEN), .s2(RW_BOTH5), .d2(D[43]), .d3(iQ[43]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[44]), .s1(CEN), .s2(RW_BOTH5), .d2(D[44]), .d3(iQ[44]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[45]), .s1(CEN), .s2(RW_BOTH5), .d2(D[45]), .d3(iQ[45]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[46]), .s1(CEN), .s2(RW_BOTH5), .d2(D[46]), .d3(iQ[46]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[47]), .s1(CEN), .s2(RW_BOTH5), .d2(D[47]), .d3(iQ[47]), .clk(CLK)); 
+   not (NOT_WEN6, WEN[6]);
+   and (RW_BOTH6,NOT_WEN6, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH6 ) begin mem6[A]=D[55:48]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[55:48]=mem6[A];
+   ds_RA1SHD2048X64 (.q(intQ[48]), .s1(CEN), .s2(RW_BOTH6), .d2(D[48]), .d3(iQ[48]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[49]), .s1(CEN), .s2(RW_BOTH6), .d2(D[49]), .d3(iQ[49]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[50]), .s1(CEN), .s2(RW_BOTH6), .d2(D[50]), .d3(iQ[50]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[51]), .s1(CEN), .s2(RW_BOTH6), .d2(D[51]), .d3(iQ[51]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[52]), .s1(CEN), .s2(RW_BOTH6), .d2(D[52]), .d3(iQ[52]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[53]), .s1(CEN), .s2(RW_BOTH6), .d2(D[53]), .d3(iQ[53]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[54]), .s1(CEN), .s2(RW_BOTH6), .d2(D[54]), .d3(iQ[54]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[55]), .s1(CEN), .s2(RW_BOTH6), .d2(D[55]), .d3(iQ[55]), .clk(CLK)); 
+   not (NOT_WEN7, WEN[7]);
+   and (RW_BOTH7,NOT_WEN7, NOT_CEN);
+   always @ ( posedge CLK ) if ( RW_BOTH7 ) begin mem7[A]=D[63:56]; #0; ->write_event; end
+   always @ ( vdd or A or write_event ) iQ[63:56]=mem7[A];
+   ds_RA1SHD2048X64 (.q(intQ[56]), .s1(CEN), .s2(RW_BOTH7), .d2(D[56]), .d3(iQ[56]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[57]), .s1(CEN), .s2(RW_BOTH7), .d2(D[57]), .d3(iQ[57]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[58]), .s1(CEN), .s2(RW_BOTH7), .d2(D[58]), .d3(iQ[58]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[59]), .s1(CEN), .s2(RW_BOTH7), .d2(D[59]), .d3(iQ[59]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[60]), .s1(CEN), .s2(RW_BOTH7), .d2(D[60]), .d3(iQ[60]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[61]), .s1(CEN), .s2(RW_BOTH7), .d2(D[61]), .d3(iQ[61]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[62]), .s1(CEN), .s2(RW_BOTH7), .d2(D[62]), .d3(iQ[62]), .clk(CLK)); 
+   ds_RA1SHD2048X64 (.q(intQ[63]), .s1(CEN), .s2(RW_BOTH7), .d2(D[63]), .d3(iQ[63]), .clk(CLK)); 
+   bufif0 I0 (Q[0], intQ[0], OEN);
+   bufif0 I1 (Q[1], intQ[1], OEN);
+   bufif0 I2 (Q[2], intQ[2], OEN);
+   bufif0 I3 (Q[3], intQ[3], OEN);
+   bufif0 I4 (Q[4], intQ[4], OEN);
+   bufif0 I5 (Q[5], intQ[5], OEN);
+   bufif0 I6 (Q[6], intQ[6], OEN);
+   bufif0 I7 (Q[7], intQ[7], OEN);
+   bufif0 I8 (Q[8], intQ[8], OEN);
+   bufif0 I9 (Q[9], intQ[9], OEN);
+   bufif0 I10 (Q[10], intQ[10], OEN);
+   bufif0 I11 (Q[11], intQ[11], OEN);
+   bufif0 I12 (Q[12], intQ[12], OEN);
+   bufif0 I13 (Q[13], intQ[13], OEN);
+   bufif0 I14 (Q[14], intQ[14], OEN);
+   bufif0 I15 (Q[15], intQ[15], OEN);
+   bufif0 I16 (Q[16], intQ[16], OEN);
+   bufif0 I17 (Q[17], intQ[17], OEN);
+   bufif0 I18 (Q[18], intQ[18], OEN);
+   bufif0 I19 (Q[19], intQ[19], OEN);
+   bufif0 I20 (Q[20], intQ[20], OEN);
+   bufif0 I21 (Q[21], intQ[21], OEN);
+   bufif0 I22 (Q[22], intQ[22], OEN);
+   bufif0 I23 (Q[23], intQ[23], OEN);
+   bufif0 I24 (Q[24], intQ[24], OEN);
+   bufif0 I25 (Q[25], intQ[25], OEN);
+   bufif0 I26 (Q[26], intQ[26], OEN);
+   bufif0 I27 (Q[27], intQ[27], OEN);
+   bufif0 I28 (Q[28], intQ[28], OEN);
+   bufif0 I29 (Q[29], intQ[29], OEN);
+   bufif0 I30 (Q[30], intQ[30], OEN);
+   bufif0 I31 (Q[31], intQ[31], OEN);
+   bufif0 I32 (Q[32], intQ[32], OEN);
+   bufif0 I33 (Q[33], intQ[33], OEN);
+   bufif0 I34 (Q[34], intQ[34], OEN);
+   bufif0 I35 (Q[35], intQ[35], OEN);
+   bufif0 I36 (Q[36], intQ[36], OEN);
+   bufif0 I37 (Q[37], intQ[37], OEN);
+   bufif0 I38 (Q[38], intQ[38], OEN);
+   bufif0 I39 (Q[39], intQ[39], OEN);
+   bufif0 I40 (Q[40], intQ[40], OEN);
+   bufif0 I41 (Q[41], intQ[41], OEN);
+   bufif0 I42 (Q[42], intQ[42], OEN);
+   bufif0 I43 (Q[43], intQ[43], OEN);
+   bufif0 I44 (Q[44], intQ[44], OEN);
+   bufif0 I45 (Q[45], intQ[45], OEN);
+   bufif0 I46 (Q[46], intQ[46], OEN);
+   bufif0 I47 (Q[47], intQ[47], OEN);
+   bufif0 I48 (Q[48], intQ[48], OEN);
+   bufif0 I49 (Q[49], intQ[49], OEN);
+   bufif0 I50 (Q[50], intQ[50], OEN);
+   bufif0 I51 (Q[51], intQ[51], OEN);
+   bufif0 I52 (Q[52], intQ[52], OEN);
+   bufif0 I53 (Q[53], intQ[53], OEN);
+   bufif0 I54 (Q[54], intQ[54], OEN);
+   bufif0 I55 (Q[55], intQ[55], OEN);
+   bufif0 I56 (Q[56], intQ[56], OEN);
+   bufif0 I57 (Q[57], intQ[57], OEN);
+   bufif0 I58 (Q[58], intQ[58], OEN);
+   bufif0 I59 (Q[59], intQ[59], OEN);
+   bufif0 I60 (Q[60], intQ[60], OEN);
+   bufif0 I61 (Q[61], intQ[61], OEN);
+   bufif0 I62 (Q[62], intQ[62], OEN);
+   bufif0 I63 (Q[63], intQ[63], OEN);
+endmodule
+`endcelldefine
+`undef read_write

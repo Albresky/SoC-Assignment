@@ -1,0 +1,178 @@
+*********************************************************************************** 
+*                                                                     		  *
+*            	SMIC SP018 IO Design Kit for complete release	      		  *
+*                                                                     		  *
+*                    ( SMIC DESIGN SERVICE DIVISION )                   	  *
+*                                                                     		  * 
+***********************************************************************************
+***********************************************************************************
+** DISCLAIMER                                                                    **
+**                                                                               **
+**   SMIC hereby provides the quality information to you but makes no claims,    **
+** promises or guarantees about the accuracy, completeness, or adequacy of the   **
+** information herein. The information contained herein is provided on an "AS IS"**
+** basis without any warranty, and SMIC assumes no obligation to provide support **
+** of any kind or otherwise maintain the information. 				 **
+**   SMIC disclaims any representation that the information does not infringe any**
+** intellectual property rights or proprietary rights of any third parties.SMIC  **
+** makes no other warranty, whether express, implied or statutory as to any      **
+** matter whatsoever,including but not limited to the accuracy or sufficiency of **
+** any information or the merchantability and fitness for a particular purpose.  **
+** Neither SMIC nor any of its representatives shall be liable for any cause of  **
+** action incurred to connect to this service.                                   **
+**                                                                               **
+**                                                                               **
+** STATEMENT OF USE AND CONFIDENTIALITY                                          **
+**                                                                               **
+**   The following/attached material contains confidential and proprietary       **
+** information of SMIC. This material is based upon information which SMIC       **
+** considers reliable, but SMIC neither represents nor warrants that such        **
+** information is accurate or complete, and it must not be relied upon as such.  **
+** This information was prepared for informational purposes and is for the use   **
+** by SMIC's customer only. SMIC reserves the right to make changes in the       **
+** information at any time without notice.                                       **
+**   No part of this information may be reproduced, transmitted, transcribed,    **
+** stored in a retrieval system, or translated into any human or computer        **
+** language, in any form or by any means, electronic, mechanical, magnetic,      **
+** optical, chemical, manual, or otherwise, without the prior written consent of **
+** SMIC. Any unauthorized use or disclosure of this material is strictly         **
+** prohibited and may be unlawful. By accepting this material, the receiving     **
+** party shall be deemed to have acknowledged, accepted, and agreed to be bound  **
+** by the foregoing limitations and restrictions. Thank you.                     **
+***********************************************************************************
+
+SMIC SP018 IO Design Kit for All Customers 
+ ---------------------------------------------------------------------------------
+| VERSION  :  1.5b                                                     		  | 
+| DATE     :  May-5-2011					      		  | 
+ --------------------------------------------------------------------------------- 
+
+Revision history :
+ -----------------------------------------------------------------------------------------------------------------------
+| Version     Date             	Author          Description                                       			|
+|-----------------------------------------------------------------------------------------------------------------------|  
+| Rev 0.1     Jan_28_2003     	John_Xia    	first release:      				 			|
+| Rev 0.11    Feb_14_2003	John_Xia	second release :     				 			|
+| 						three pads gds data added;  			 			|
+| 						some application notes added;			 			|
+| 						synopsy symbol library added;						|
+| 						No other change.				 			|
+| Rev 0.12    Mar_26_2003	John_Xia	third release:			 					|
+| 						apollo FRAME VIEW optimized;			 			|
+| 						SPICE netlist optimized for bundle LVS check;				|	
+| 						Synopsys synthesis *.lib model optimized;			 	|
+| 						new gds and lef file for 4-metal IO added. 			 	|
+| Rev 0.13    May_05_2003     	Amy_Hu      	fourth release:			 					|
+|                                        	modified current denisity to GDS files; 			 	|
+|                                         	fixed vital model about the problem that couldn't			|
+|							       control the pull-down with REN pin. 			|
+|-----------------------------------------------------------------------------------------------------------------------|
+| Rev 1.0     Jul-11-2003      	May_Ma          FIFTH RELEASE:      				 			|
+|					        Spice Model is updated to V2.0 from V1.3 ;	 			|
+|					        Change to StarRCXT netlists instead of LPE ;	 			|
+|					        Modify PCORNER cell's position to fit Apollo tool;			|  
+|						Add cell PCI6B and PCI6BS;			 			|
+|-----------------------------------------------------------------------------------------------------------------------|
+| Rev 1.1     Aug-25-2003      	May_Ma          SIXTH RELEASE:      				 			|
+|					        Revise the gds for diode cells of PDIODE / PDIODE8;			|
+|					        Modify lef file	for 4,5,6 metal layers design;		                |
+|-----------------------------------------------------------------------------------------------------------------------|
+| Rev 1.2     Nov-04-2003      	May_Ma          SEVENTH RELEASE:      				 			|
+|					        Improve circuit's performance under high frequency;			|
+|					        Do synthesis library(syn/*,tlf/*) according to new characterization;    |
+|					        Update lef files;     				 			|
+|                                               Add fastscan model;                                                     |
+|-----------------------------------------------------------------------------------------------------------------------|
+| Rev 1.3     Dec-01-2003       May_Ma          EIGHTH RELEASE:                                                         |
+|                                               Add 7 cells : PVDD1CAP PVDD1CAP1 PVSS1CAP PVSS1CAP1 PVSS3CAP PVDD3CAP   |
+|                                                             PANA4AP;                                                  |
+|                                               Improve current capability of PANA1AP & PANA1AP1;                       |
+|                                               Add lef files for bondpads;                                             |
+|-----------------------------------------------------------------------------------------------------------------------|
+| Rev 1.4     Aug-02-2004       May_Ma          NINTH RELEASE:                                                          |
+|                                               Spice Model is updated to V2.2;                                         |
+|                                               Add three cells : PANA3AP, PVDD1ANP, PVSS1ANP;                          |
+|                                               Add bonding pad: PADI65, PADI60, PADI55, PADI50, PADI45;  		|
+|                                               Add IBIS model;                                                         |
+|                                               Add timing view and power view;                                         |
+|                                               Modify layout of PANA1AP,PANA1AP1,PANA2AP,PANA4AP,PCI*;                 |
+|						Improve synthesis library(syn/*,tlf/*):add low temperature condition and|
+|						        modify input capacitance and leakage power;      		|
+|                                               Improve lef files: add via and connect to core information;             |
+|                                               Update corresponding fram view, document and other Design Kit according |
+|                                                      to addition and modification;                         		|
+|-----------------------------------------------------------------------------------------------------------------------|
+| Rev 1.5     Nov-01-2004       May_Ma          TENTH RELEASE:                                                          |
+|                                               Modify layout of PANA2AP,PANA2AP1,PANA3AP,PANA4AP for good performance; |
+|                                               Update netlist of cells PANA2AP,PANA2AP1,PANA3AP,PANA4AP;               |
+|             Dec-14-2005                       Update lef files;                                                       |
+| Rev 1.5a    Aug-07-2009       Nicole_Wang     Update verilog for function improvement;                                |    
+|                                               Update doc;                                                             |
+|                                               Add application check list;                                             |
+| Rev 1.5b    May_05-2011       Marina_Ma       Update lvs for modifying resistor data;                                 |    
+|						Update check list;							|
+ -----------------------------------------------------------------------------------------------------------------------
+
+      CONTENT          	       		CREATOR		             DETAILS
+ -----------------------------------------------------------------------------------------------------------------------
+| apollo/		       		Liang_Shi       design data for Apollo P&R flow			 		|
+|   ./SP018_V1p4_4MT/   				for 4 metal layers design			 		|
+|   ./SP018_V1p4_5MT/   	 			for 5 metal layers design			 		|
+|   ./SP018_V1p4_6MT/					for 6 metal layers deisgn 			 		|
+|-----------------------------------------------------------------------------------------------------------------------|
+| atpg/				        May_Ma		Mentor DFT ATPG library                                         |
+|   ./SP018_V1p4.atpg                                                                                                   |
+|-----------------------------------------------------------------------------------------------------------------------|
+| doc/			       		May_Ma		including IO datasheet and application notes	 		|
+|   ./SMIC_SP018_IO_DataBook_Ver1p3.pdf			IO cell library data book		 			|
+|   ./SMIC_Standard_IO_Application_Note_Ver3p0.pdf   	IO cell library application note		 		|
+|   ./SMIC_IO_Application_Check_List_Ver0p6.pdf         IO cell library Application Check List                          |
+|-----------------------------------------------------------------------------------------------------------------------|
+| gds/			        	Michelle_Wu  	gds data containing all IO cells(only in the CDK release) 	|
+|   ./SP018_ANALOG_V1p5_4MT.gds                         analog cells for 4 metal layers design                          |
+|   ./SP018_ANALOG_V1p5_5MT.gds                         analog cells for 5 metal layers design                          |
+|   ./SP018_ANALOG_V1p5_6MT.gds                         analog cells for 6 metal layers design                          |
+|   ./SP018_V1p4_4MT.gds	     	 		digital cells for 4 metal layers design		 		|
+|   ./SP018_V1p4_5MT.gds				digital cells for 5 metal layers design		 		|
+|   ./SP018_V1p4_6MT.gds				digital cells for 6 metal layers deisgn		 		|
+|   ./Err_type_V1p4					runset file information and error types that can be ignored(DRC |
+|							and ERC)							|
+|-----------------------------------------------------------------------------------------------------------------------|
+| ibis/                         	Haifeng_Xue     IBIS (Input Output Buffer Information Specification) model      | 
+|    ./sp018.ibs                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------|
+| lef/		     	        Nancy_Liu,Ivy_Yang	Cadence P&R library, for SE5.3			 		|
+|   ./SP018_V1p5_4MT.lef               			for 4 metal layers design			 		|
+|   ./SP018_V1p5_5MT.lef				for 5 metal layers design			 		|
+|   ./SP018_V1p5_6MT.lef				for 6 metal layers deisgn			 		|
+|-----------------------------------------------------------------------------------------------------------------------|
+| lvs/			        	Michelle_Wu	spice netlist for lvs use(only in the CDK release)		|
+|   ./SP018_V1p5b.sp										 			|
+|-----------------------------------------------------------------------------------------------------------------------|
+| symbol/			 	May_Ma		synopsys symbol library				 		|
+|   ./SP018_V1p4.slib					synopsys symbol library source files				|
+|   ./SP018_V1p4.sdb					Compiled symbol library in Synopsys database format 		|
+|-----------------------------------------------------------------------------------------------------------------------|
+| syn/	  	       	    		Haifeng_Xue	synopsys synthesis library			 		|
+|   ./SP018_V1p4_max.lib				Technology library source files of WCCOM			|
+|   ./SP018_V1p4_typ.lib				Technology library source files of NCCOM			|
+|   ./SP018_V1p4_min.lib				Technology library source files of BCCOM			|
+|   ./SP018_V1p4_low_temp.lib                           Technology library source files of low temperature              |
+|   ./SP018_V1p4_max.db					Compiled WCCOM in Synopsys database format 			|
+|   ./SP018_V1p4_typ.db					Compiled NCCOM in Synopsys database format 			|
+|   ./SP018_V1p4_min.db					Compiled BCCOM in Synopsys database format			|
+|   ./SP018_V1p4_low_temp.db                            Compiled low temperature in Synopsys database format            |
+|-----------------------------------------------------------------------------------------------------------------------|
+| tlf/			        	May_Ma	 	Cadence format timing library of SE flow, translated from *.lib |
+|   ./SP018_V1p4_max.tlf				Timing library source files of WCCOM				|
+|   ./SP018_V1p4_typ.tlf				Timing library source files of NCCOM				|
+|   ./SP018_V1p4_min.tlf				Timing library source files of BCCOM				|
+|   ./SP018_V1p4_low_temp.tlf                           Timing library source files of low temperature                  |
+|-----------------------------------------------------------------------------------------------------------------------|
+| verilog/	  	        	Elliv_Liu  	zero delay model without timing information 	 		|
+|   ./SP018_V1p5a.v									 	 			|
+|-----------------------------------------------------------------------------------------------------------------------|
+| vhdl/                         	May_Ma  	vhdl model for all IO cells			 		|
+|   ./SP018_V1p4.vhd					vital models 	 				 		|
+ -----------------------------------------------------------------------------------------------------------------------
+ 

@@ -1,0 +1,66 @@
+6:08:30 AM - ARM Physical IP, Inc.
+6:08:30 AM - SunOS CC 5.9 Generic_117171-07 sun4u sparc SUNW,Ultra-Enterprise
+6:08:30 AM - Version 2005Q3V1
+6:08:30 AM - GUI version 4.58.20
+6:08:30 AM - 
+6:08:30 AM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+6:08:30 AM - 
+6:08:30 AM - Copyright (c) 1993 - 2002 ARM Physical IP, Inc.  All Rights Reserved.
+6:08:30 AM - 
+6:08:30 AM - Use of this Software is subject to the terms and conditions of the
+6:08:30 AM - applicable license agreement with ARM Physical IP, Inc. 
+6:08:30 AM - In addition, this Software is protected by patents, copyright law 
+6:08:30 AM - and international treaties.
+6:08:30 AM - 
+6:08:30 AM - The copyright notice(s) in this Software does not indicate actual or
+6:08:30 AM - intended publication of this Software.
+6:08:30 AM - 
+6:08:30 AM - High Speed/Density Single-Port SRAM, SMIC 0.18um Logic018 Process
+6:08:30 AM - 
+6:08:30 AM - Log file is ACI.log
+6:08:30 AM - 
+6:09:18 AM - ASCII Datatable updated
+6:09:29 AM - ASCII Datatable updated
+6:09:49 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd postscript -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:09:51 AM - PostScript Datasheet generator succeeded, created:
+6:09:51 AM -    RA1SHD512X32.ps
+6:09:52 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd ascii -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:09:54 AM - ASCII Datatable generator succeeded, created:
+6:09:54 AM -    RA1SHD512X32.dat
+6:09:54 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd verilog -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:09:55 AM - Verilog Model generator succeeded, created:
+6:09:55 AM -    RA1SHD512X32.v
+6:09:56 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd vhdl -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:09:56 AM - VHDL Model generator succeeded, created:
+6:09:56 AM -    RA1SHD512X32.vhd
+6:09:57 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd synopsys -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on -libname USERLIB
+6:11:00 AM - Synopsys Model generator succeeded, created:
+6:11:00 AM -    RA1SHD512X32_fast@-40C_syn.lib
+6:11:00 AM -    RA1SHD512X32_fast@0C_syn.lib
+6:11:00 AM -    RA1SHD512X32_typical_syn.lib
+6:11:01 AM -    RA1SHD512X32_slow_syn.lib
+6:11:01 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd primetime -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:11:37 AM - PrimeTime Model generator succeeded, created:
+6:11:37 AM -    RA1SHD512X32_fast@-40C.data
+6:11:37 AM -    RA1SHD512X32_fast@0C.data
+6:11:37 AM -    RA1SHD512X32_typical.data
+6:11:37 AM -    RA1SHD512X32_slow.data
+6:11:37 AM -    RA1SHD512X32.mod
+6:11:37 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd tlf -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on -libname USERLIB
+6:13:14 AM - TLF Model generator succeeded, created:
+6:13:14 AM -    RA1SHD512X32_fast@-40C.tlf
+6:13:14 AM -    RA1SHD512X32_fast@0C.tlf
+6:13:14 AM -    RA1SHD512X32_typical.tlf
+6:13:14 AM -    RA1SHD512X32_slow.tlf
+6:13:15 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd vclef-fp -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on -inst2ring blockages -site_def off
+6:13:42 AM - VCLEF Footprint generator succeeded, created:
+6:13:42 AM -    RA1SHD512X32.vclef
+6:13:42 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd gds2 -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:14:36 AM - GDSII Layout generator succeeded, created:
+6:14:36 AM -    RA1SHD512X32.gds2
+6:14:36 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd lvs -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:14:56 AM - LVS Netlist generator succeeded, created:
+6:14:56 AM -    RA1SHD512X32.cdl
+6:14:56 AM - command: /export/home/SMIC180nm_MC/MEM_IP_20MHz/RA1SHD512X32/../../ra1shd/bin/ra1shd tmax -instname RA1SHD512X32 -words 512 -bits 32 -frequency 20 -ring_width 2 -mux 4 -drive 12 -write_mask on -wp_size 8 -top_layer met6 -power_type rings -horiz met3 -vert met4 -cust_comment "" -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -asvm on
+6:14:57 AM - TetraMax Model generator succeeded, created:
+6:14:57 AM -    RA1SHD512X32.tv
