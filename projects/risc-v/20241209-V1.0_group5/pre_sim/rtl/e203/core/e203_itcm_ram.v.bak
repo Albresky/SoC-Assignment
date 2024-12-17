@@ -44,20 +44,8 @@ module e203_itcm_ram(
 
 );
 
-  wire [`E203_ITCM_RAM_DP-1:0] wen;
-  assign wen = ({`E203_ITCM_RAM_DP{cs & we}} & wem);
-
-RA1SHD8192X64 u_e203_itcm_gnrl_ram(
-  .Q        (dout   ),
-  .CLK      (clk    ),
-  .CEN      (~cs    ),
-  .WEN      (~wen   ),
-  .A        (addr   ),
-  .D        (din    ),
-  .OEN      (1'b0   )
-);
  
-/*   sirv_gnrl_ram #(
+  sirv_gnrl_ram #(
       `ifndef E203_HAS_ECC//{
     .FORCE_X2ZERO(0),
       `endif//}
@@ -78,7 +66,7 @@ RA1SHD8192X64 u_e203_itcm_gnrl_ram(
   .din (din ),
   .wem (wem ),
   .dout(dout)
-  ); */
+  );
                                                       
 endmodule
   `endif//}

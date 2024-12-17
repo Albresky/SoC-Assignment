@@ -1,3 +1,5 @@
+../../../lib/SMIC180/MEM_IP_20MHz/RA1SHD8192X32/RA1SHD8192X32.v
+../../../lib/SMIC180/MEM_IP_20MHz/RA1SHD8192X64/RA1SHD8192X64.v
 ./rtl/e203/core/config.v
 ./rtl/e203/core/e203_biu.v
 ./rtl/e203/core/e203_clk_ctrl.v

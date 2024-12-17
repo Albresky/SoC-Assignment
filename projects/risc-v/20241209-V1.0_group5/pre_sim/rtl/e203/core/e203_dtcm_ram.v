@@ -46,7 +46,20 @@ module e203_dtcm_ram(
 
 );
 
-  sirv_gnrl_ram #(
+  wire [`E203_DTCM_RAM_MW-1:0] wen;
+  assign wen = ({`E203_DTCM_RAM_MW{cs & we}} & wem);
+
+RA1SHD8192X32 u_e203_dtcm_gnrl_ram(
+  .Q        (dout         ),
+  .CLK      (clk          ),
+  .CEN      (~cs          ),
+  .WEN      (~wen         ),
+  .A        (addr[12:0]   ),
+  .D        (din          ),
+  .OEN      (1'b0         )
+);
+
+/*   sirv_gnrl_ram #(
     .FORCE_X2ZERO(1),//Always force X to zeros
     .DP(`E203_DTCM_RAM_DP),
     .DW(`E203_DTCM_RAM_DW),
@@ -65,7 +78,7 @@ module e203_dtcm_ram(
   .din (din ),
   .wem (wem ),
   .dout(dout)
-  );
+  ); */
                                                       
 endmodule
   `endif//}

@@ -11,7 +11,8 @@ module tb_top();
 
   `define CPU_TOP u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.u_e203_cpu_top
   `define EXU `CPU_TOP.u_e203_cpu.u_e203_core.u_e203_exu
-  `define ITCM `CPU_TOP.u_e203_srams.u_e203_itcm_ram.u_e203_itcm_gnrl_ram.u_sirv_sim_ram
+  // `define ITCM `CPU_TOP.u_e203_srams.u_e203_itcm_ram.u_e203_itcm_gnrl_ram.u_sirv_sim_ram
+  `define ITCM `CPU_TOP.u_e203_srams.u_e203_itcm_ram.u_e203_itcm_gnrl_ram
 
   `define PC_WRITE_TOHOST       `E203_PC_SIZE'h80000086
   `define PC_EXT_IRQ_BEFOR_MRET `E203_PC_SIZE'h800000a6
@@ -265,31 +266,31 @@ module tb_top();
 
   integer i;
 
-    reg [7:0] itcm_mem [0:(`E203_ITCM_RAM_DP*8)-1];
+    reg [7:0] itcm_mem [0:(`E203_ITCM_RAM_MW*8)-1];
     initial begin
       $readmemh({testcase, "./riscv-tools/riscv-tests/isa/generated/rv32ui-p-add.verilog"}, itcm_mem);
 
-      for (i=0;i<(`E203_ITCM_RAM_DP);i=i+1) begin
-          `ITCM.mem_r[i][00+7:00] = itcm_mem[i*8+0];
-          `ITCM.mem_r[i][08+7:08] = itcm_mem[i*8+1];
-          `ITCM.mem_r[i][16+7:16] = itcm_mem[i*8+2];
-          `ITCM.mem_r[i][24+7:24] = itcm_mem[i*8+3];
-          `ITCM.mem_r[i][32+7:32] = itcm_mem[i*8+4];
-          `ITCM.mem_r[i][40+7:40] = itcm_mem[i*8+5];
-          `ITCM.mem_r[i][48+7:48] = itcm_mem[i*8+6];
-          `ITCM.mem_r[i][56+7:56] = itcm_mem[i*8+7];
+      for (i=0;i<(`E203_ITCM_RAM_MW);i=i+1) begin
+          `ITCM.mem[i][00+7:00] = itcm_mem[i*8+0];
+          `ITCM.mem[i][08+7:08] = itcm_mem[i*8+1];
+          `ITCM.mem[i][16+7:16] = itcm_mem[i*8+2];
+          `ITCM.mem[i][24+7:24] = itcm_mem[i*8+3];
+          `ITCM.mem[i][32+7:32] = itcm_mem[i*8+4];
+          `ITCM.mem[i][40+7:40] = itcm_mem[i*8+5];
+          `ITCM.mem[i][48+7:48] = itcm_mem[i*8+6];
+          `ITCM.mem[i][56+7:56] = itcm_mem[i*8+7];
       end
 
-        $display("ITCM 0x00: %h", `ITCM.mem_r[8'h00]);
-        $display("ITCM 0x01: %h", `ITCM.mem_r[8'h01]);
-        $display("ITCM 0x02: %h", `ITCM.mem_r[8'h02]);
-        $display("ITCM 0x03: %h", `ITCM.mem_r[8'h03]);
-        $display("ITCM 0x04: %h", `ITCM.mem_r[8'h04]);
-        $display("ITCM 0x05: %h", `ITCM.mem_r[8'h05]);
-        $display("ITCM 0x06: %h", `ITCM.mem_r[8'h06]);
-        $display("ITCM 0x07: %h", `ITCM.mem_r[8'h07]);
-        $display("ITCM 0x16: %h", `ITCM.mem_r[8'h16]);
-        $display("ITCM 0x20: %h", `ITCM.mem_r[8'h20]);
+        $display("ITCM 0x00: %h", `ITCM.mem[8'h00]);
+        $display("ITCM 0x01: %h", `ITCM.mem[8'h01]);
+        $display("ITCM 0x02: %h", `ITCM.mem[8'h02]);
+        $display("ITCM 0x03: %h", `ITCM.mem[8'h03]);
+        $display("ITCM 0x04: %h", `ITCM.mem[8'h04]);
+        $display("ITCM 0x05: %h", `ITCM.mem[8'h05]);
+        $display("ITCM 0x06: %h", `ITCM.mem[8'h06]);
+        $display("ITCM 0x07: %h", `ITCM.mem[8'h07]);
+        $display("ITCM 0x16: %h", `ITCM.mem[8'h16]);
+        $display("ITCM 0x20: %h", `ITCM.mem[8'h20]);
 
     end 
 

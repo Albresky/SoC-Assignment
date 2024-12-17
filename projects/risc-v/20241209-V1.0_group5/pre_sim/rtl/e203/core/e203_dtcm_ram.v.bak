@@ -17,17 +17,19 @@
                                                                          
                                                                          
 //=====================================================================
+//
 // Designer   : Bob Hu
 //
 // Description:
-//  The ITCM-SRAM module to implement ITCM SRAM
+//  The DTCM-SRAM module to implement DTCM SRAM
 //
 // ====================================================================
+`include "../core/e203_defines.v"
 
-`include "e203_defines.v"
+  `ifdef E203_HAS_DTCM //{
 
-  `ifdef E203_HAS_ITCM //{
-module e203_itcm_ram(
+
+module e203_dtcm_ram(
 
   input                              sd,
   input                              ds,
@@ -35,37 +37,22 @@ module e203_itcm_ram(
 
   input                              cs,  
   input                              we,  
-  input  [`E203_ITCM_RAM_AW-1:0] addr, 
-  input  [`E203_ITCM_RAM_MW-1:0] wem,
-  input  [`E203_ITCM_RAM_DW-1:0] din,          
-  output [`E203_ITCM_RAM_DW-1:0] dout,
+  input  [`E203_DTCM_RAM_AW-1:0] addr, 
+  input  [`E203_DTCM_RAM_MW-1:0] wem,
+  input  [`E203_DTCM_RAM_DW-1:0] din,          
+  output [`E203_DTCM_RAM_DW-1:0] dout,
   input                              rst_n,
   input                              clk
 
 );
 
-  wire [`E203_ITCM_RAM_DP-1:0] wen;
-  assign wen = ({`E203_ITCM_RAM_DP{cs & we}} & wem);
-
-RA1SHD8192X64 u_e203_itcm_gnrl_ram(
-  .Q        (dout   ),
-  .CLK      (clk    ),
-  .CEN      (~cs    ),
-  .WEN      (~wen   ),
-  .A        (addr   ),
-  .D        (din    ),
-  .OEN      (1'b0   )
-);
- 
-/*   sirv_gnrl_ram #(
-      `ifndef E203_HAS_ECC//{
-    .FORCE_X2ZERO(0),
-      `endif//}
-    .DP(`E203_ITCM_RAM_DP),
-    .DW(`E203_ITCM_RAM_DW),
-    .MW(`E203_ITCM_RAM_MW),
-    .AW(`E203_ITCM_RAM_AW) 
-  ) u_e203_itcm_gnrl_ram(
+  sirv_gnrl_ram #(
+    .FORCE_X2ZERO(1),//Always force X to zeros
+    .DP(`E203_DTCM_RAM_DP),
+    .DW(`E203_DTCM_RAM_DW),
+    .MW(`E203_DTCM_RAM_MW),
+    .AW(`E203_DTCM_RAM_AW) 
+  ) u_e203_dtcm_gnrl_ram(
   .sd  (sd  ),
   .ds  (ds  ),
   .ls  (ls  ),
@@ -78,7 +65,7 @@ RA1SHD8192X64 u_e203_itcm_gnrl_ram(
   .din (din ),
   .wem (wem ),
   .dout(dout)
-  ); */
+  );
                                                       
 endmodule
   `endif//}
