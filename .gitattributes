@@ -1,1 +1,2 @@
 src_pack/LAB1_setup.tar.gz filter=lfs diff=lfs merge=lfs -text
+projects/risc-v/20241209-V1.0_group5/data_org/e203_hbirdv2-master.zip filter=lfs diff=lfs merge=lfs -text
