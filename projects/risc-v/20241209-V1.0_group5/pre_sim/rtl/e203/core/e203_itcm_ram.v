@@ -44,8 +44,8 @@ module e203_itcm_ram(
 
 );
 
-  wire [`E203_ITCM_RAM_DP-1:0] wen;
-  assign wen = ({`E203_ITCM_RAM_DP{cs & we}} & wem);
+  wire [`E203_ITCM_RAM_MW-1:0] wen;
+  assign wen = ({`E203_ITCM_RAM_MW{cs & we}} & wem);
 
 RA1SHD8192X64 u_e203_itcm_gnrl_ram(
   .Q        (dout   ),
