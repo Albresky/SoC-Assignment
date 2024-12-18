@@ -1,1 +1,1 @@
-vcs -gui -f e203_filelist.f -timescale=1ns/1ps -R +neg_tchk +maxdelays +notimingcheck +nospecify +vc +v2k -sverilog -debug_access+all +incdir+rtl/e203/core +incdir+rtl/e203/perips/apb_i2c +error+99 -kdb | tee vcs.log
+vcs -gui -f e203_filelist.f -timescale=1ns/1ps -R +neg_tchk +maxdelays +notimingcheck +nospecify +vc +v2k -sverilog -debug_access+all +incdir+rtl/e203/core +incdir+rtl/e203/perips/apb_i2c +error+99 -kdb +lint=PCWM | tee vcs.log
