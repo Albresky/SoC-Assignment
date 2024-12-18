@@ -266,11 +266,11 @@ module tb_top();
 
   integer i;
 
-    reg [7:0] itcm_mem [0:(`E203_ITCM_RAM_MW*8)-1];
+    reg [7:0] itcm_mem [0:(`E203_ITCM_RAM_DP*8)-1];
     initial begin
       $readmemh({testcase, "./riscv-tools/riscv-tests/isa/generated/rv32ui-p-add.verilog"}, itcm_mem);
 
-      for (i=0;i<(`E203_ITCM_RAM_MW);i=i+1) begin
+      for (i=0;i<(`E203_ITCM_RAM_DP);i=i+1) begin
           `ITCM.mem[i][00+7:00] = itcm_mem[i*8+0];
           `ITCM.mem[i][08+7:08] = itcm_mem[i*8+1];
           `ITCM.mem[i][16+7:16] = itcm_mem[i*8+2];
