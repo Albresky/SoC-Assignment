@@ -9,7 +9,7 @@ module tb_top();
 
   wire hfclk = clk;
 
-  `define CPU_TOP u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.u_e203_cpu_top
+  `define CPU_TOP u_full_chip.u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.u_e203_cpu_top
   `define EXU `CPU_TOP.u_e203_cpu.u_e203_core.u_e203_exu
   // `define ITCM `CPU_TOP.u_e203_srams.u_e203_itcm_ram.u_e203_itcm_gnrl_ram.u_sirv_sim_ram
   `define ITCM `CPU_TOP.u_e203_srams.u_e203_itcm_ram.u_e203_itcm_gnrl_ram
@@ -75,7 +75,7 @@ module tb_top();
   `define SFT_IRQ u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.clint_sft_irq
   `define TMR_IRQ u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.clint_tmr_irq
 
-  `define U_CPU u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.u_e203_cpu_top.u_e203_cpu
+  `define U_CPU u.full_chip.u_e203_soc_top.u_e203_subsys_top.u_e203_subsys_main.u_e203_cpu_top.u_e203_cpu
   `define ITCM_BUS_ERR `U_CPU.u_e203_itcm_ctrl.sram_icb_rsp_err
   `define ITCM_BUS_READ `U_CPU.u_e203_itcm_ctrl.sram_icb_rsp_read
   `define STATUS_MIE   `U_CPU.u_e203_core.u_e203_exu.u_e203_exu_commit.u_e203_exu_excp.status_mie_r
@@ -295,6 +295,9 @@ module tb_top();
     end 
 
 
+  ///////////////////////
+  ////// Full Chip //////
+  ///////////////////////
 
   wire jtag_TDI = 1'b0;
   wire jtag_TDO;
@@ -304,7 +307,59 @@ module tb_top();
 
   wire jtag_DRV_TDO = 1'b0;
 
+  wire [31:0] gpioA;
+  wire [31:0] gpioB;
 
+  wire io_pads_qspi0_dq_0;
+  wire io_pads_qspi0_dq_1;
+  wire io_pads_qspi0_dq_2;
+  wire io_pads_qspi0_dq_3;
+
+  assign io_pads_qspi0_dq_0 = 1'b1;
+  assign io_pads_qspi0_dq_1 = 1'b1;
+  assign io_pads_qspi0_dq_2 = 1'b1;
+  assign io_pads_qspi0_dq_3 = 1'b1;
+
+  assign gpioA = 32'b0;
+  assign gpioB = 32'b0;
+
+  full_chip u_full_chip(
+      .hfextclk                         (hfclk),
+      .hfxoscen                         (),
+      .lfextclk                         (lfextclk),
+      .lfxoscen                         (),
+
+      .io_pads_jtag_TCK_i_ival          (jtag_TCK),
+      .io_pads_jtag_TMS_i_ival          (jtag_TMS),
+      .io_pads_jtag_TDI_i_ival          (jtag_TDI),
+      .io_pads_jtag_TDO_o               (jtag_TDO),
+
+      .io_pads_gpioA                    (gpioA),
+      .io_pads_gpioB                    (gpioB),
+
+      .io_pads_qspi0_sck_o_oval         (),
+      .io_pads_qspi0_cs_0_o_oval        (),
+
+      .io_pads_qspi0_dq_0               (io_pads_qspi0_dq_0),
+      .io_pads_qspi0_dq_1               (io_pads_qspi0_dq_1),
+      .io_pads_qspi0_dq_2               (io_pads_qspi0_dq_2),
+      .io_pads_qspi0_dq_3               (io_pads_qspi0_dq_3),
+
+      .io_pads_aon_erst_n_i_ival        (rst_n),
+
+      .io_pads_dbgmode0_n_i_ival        (1'b1),
+      .io_pads_dbgmode1_n_i_ival        (1'b1),
+      .io_pads_dbgmode2_n_i_ival        (1'b1),
+
+      .io_pads_bootrom_n_i_ival         (1'b0),
+
+      .io_pads_aon_pmu_dwakeup_n_i_ival (1'b1),
+      .io_pads_aon_pmu_padrst_o_oval    (),
+      .io_pads_aon_pmu_vddpaden_o_oval  ()
+  );
+
+
+/* 
 e203_soc_top u_e203_soc_top(
    
    .hfextclk(hfclk),
@@ -353,7 +408,7 @@ e203_soc_top u_e203_soc_top(
     .io_pads_dbgmode1_n_i_ival       (1'b1),
     .io_pads_dbgmode2_n_i_ival       (1'b1) 
 );
-
+ */
 
 initial
 begin
