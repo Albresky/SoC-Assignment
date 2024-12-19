@@ -4,6 +4,7 @@ novas.*
 vcs.log*
 simv
 ucli.key
+*.old
 
 # folders
 simv.daidir
