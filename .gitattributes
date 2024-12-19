@@ -1,2 +1,7 @@
 src_pack/LAB1_setup.tar.gz filter=lfs diff=lfs merge=lfs -text
 projects/risc-v/20241209-V1.0_group5/data_org/e203_hbirdv2-master.zip filter=lfs diff=lfs merge=lfs -text
+projects/lib/SMIC180/SCC018UG_UHD_RVT_V0p4a/liberty/1.8v/scc018ug_uhd_rvt_ff_v1p98_-40c_basic.lib filter=lfs diff=lfs merge=lfs -text
+projects/lib/SMIC180/SCC018UG_UHD_RVT_V0p4a/liberty/1.8v/scc018ug_uhd_rvt_ff_v1p98_0c_basic.lib filter=lfs diff=lfs merge=lfs -text
+projects/lib/SMIC180/SCC018UG_UHD_RVT_V0p4a/liberty/1.8v/scc018ug_uhd_rvt_ss_v1p62_125c_basic.lib filter=lfs diff=lfs merge=lfs -text
+projects/lib/SMIC180/SCC018UG_UHD_RVT_V0p4a/liberty/1.8v/scc018ug_uhd_rvt_tt_v1p8_25c_basic.lib filter=lfs diff=lfs merge=lfs -text
+projects/lib/SMIC180/SCC018UG_UHD_RVT_V0p4a/liberty/1.8v/scc018ug_uhd_rvt_tt_v1p8_85c_basic.lib filter=lfs diff=lfs merge=lfs -text
