@@ -1,6 +1,7 @@
 # files
 novas.*
 *.log
+vcs.log*
 simv
 ucli.key
 
