@@ -1,0 +1,282 @@
+
+
+***********************************************************************************
+*                                                                                 *
+*              SMIC Standard Cell Library Design Kit Release                      *
+*                                                                                 *
+*                    ( SMIC DESIGN SERVICE CENTER )                               *
+*                                                                                 *
+***********************************************************************************
+***********************************************************************************
+** DISCLAIMER                                                                    **
+**                                                                               **
+**   SMIC hereby provides the quality information to you but makes no claims,    **
+** promises or guarantees about the accuracy, completeness, or adequacy of the   **
+** information herein. The information contained herein is provided on an "AS IS"**
+** basis without any warranty, and SMIC assumes no obligation to provide support **
+** of any kind or otherwise maintain the information.                            **
+**   SMIC disclaims any representation that the information does not infringe any**
+** intellectual property rights or proprietary rights of any third parties.SMIC  **
+** makes no other warranty, whether express, implied or statutory as to any      **
+** matter whatsoever,including but not limited to the accuracy or sufficiency of **
+** any information or the merchantability and fitness for a particular purpose.  **
+** Neither SMIC nor any of its representatives shall be liable for any cause of  **
+** action incurred to connect to this service.                                   **
+**                                                                               **
+**                                                                               **
+** STATEMENT OF USE AND CONFIDENTIALITY                                          **
+**                                                                               **
+**   The following/attached material contains confidential and proprietary       **
+** information of SMIC. This material is based upon information which SMIC       **
+** considers reliable, but SMIC neither represents nor warrants that such        **
+** information is accurate or complete, and it must not be relied upon as such.  **
+** This information was prepared for informational purposes and is for the use   **
+** by SMIC's customer only. SMIC reserves the right to make changes in the       **
+** information at any time without notice.                                       **
+**   No part of this information may be reproduced, transmitted, transcribed,    **
+** stored in a retrieval system, or translated into any human or computer        **
+** language, in any form or by any means, electronic, mechanical, magnetic,      **
+** optical, chemical, manual, or otherwise, without the prior written consent of **
+** SMIC. Any unauthorized use or disclosure of this material is strictly         **
+** prohibited and may be unlawful. By accepting this material, the receiving     **
+** party shall be deemed to have acknowledged, accepted, and agreed to be bound  **
+** by the foregoing limitations and restrictions. Thank you.                     **
+**                                                                               **
+***********************************************************************************
+
+-----------------------------------------------------------------------------------
+ Confidential
+ Copyright (C) 2017 SMIC
+ All rights reserved
+-----------------------------------------------------------------------------------
+
+1> PRODUCT INFORMATION:
+-----------------------------------------------------------------------------------
+
+        ++IP Code       : SCC018UG_UHD_RVT
+        ++Product Name  : Standard Cell Library
+        ++Technology    : 0.18um CMOS G(Logic/Mix-signal 1.8/3.3V), core cell library, Standard Vt, 6-track ultra high density, tapless cell layout structure
+        ++IP Version    : V0.4
+        ++Release date  : 2017-11-17
+
+2> PROCESS TECHNOLOGY DATA:
+-----------------------------------------------------------------------------------
+        ++Design Rule Document
+            TD-LO18-DR-2001 
+            Rev.:v102> PROCESS TECHNOLOGY DATA:
+-----------------------------------------------------------------------------------
+        ++Design Rule Document
+            TD-LO18-DR-2001 
+            Rev.:1.18/10
+	    Last modified date:2015-7-27
+            TD-MM18-DR-2003 
+            Rev.:1.12/10
+	    Last modified date:2017-03-17
+            TD-BC18-DR-2006 
+            Rev.:1.10/3 
+	    Last modified date:2017-03-17
+        ++Calibre DRC Command File
+          - SmicDR10_cal018_log_sali_p1mtx_1833_V1.18_1.drc
+            Rev: V1.18_1
+            Last modified date:2015-9-25
+          - SMIC_CalDRC_018MS_1850_V1.12_0.drc
+            Rev: V1.12_0
+            Last modified date:2017-3-15
+          - SMIC_CalDRC_018EPIBCD_1850100120200350400_V1.10_0.drc
+            Rev: V1.10_0
+            Last modified date:2017-3-15
+        ++Calibre LVS Command File
+          - SMIC_CalLVS_018MSE_1833_V1.11_0.lvs
+            Rev.:V1.11_0
+            Last modified date:2016-10-15
+          - SMIC_CalLVS_018MS_1850_V1.16_0.lvs
+            Rev.:V1.16_0
+            Last modified date:2016-10-18
+          - SMIC_CalLVS_018EPIBCD_1850100120200350400_V1.10_0.lvs
+            Rev.:V1.10_0
+            Last modified date:2017-03-20
+        ++Special DRC Command File
+          - her_018std_6T_spec_check_v0p1.drc
+            Rev.:v0p1
+            Last modified date:2013-7-17
+        ++RCX Command File
+          - StarRC_018MSE_1833_1P6M_5Ia_1TMa1_MIM1.0fF_TYP.nxtgrd
+            Rev.:V1.11_0
+            Last modified date:2016-11-11
+        ++Process Name
+          - SMIC 018u Mixed Signal 1PXM Salicide 1.8V/3.3V enhanced Process
+        ++SPICE Model
+          - ms018_enhanced_v1p11.li
+	    Rev.:v1p11
+           Last modified date:2016-11-10
+
+
+3> APPLICATION WARNING:
+-----------------------------------------------------------------------------------
+This section lists the EDA tools and versions supported for this
+product release. The items indicated by the "*" were used during the
+QA testing of this release.
+
+        * Synopsys Milkyway (FRAM, CEL)
+          - 2010.12-SP5
+
+        ++Cadence SoC Encounter/First Encounter (Design Planning)
+          - 13.1
+        ++Cadence SoC Encounter/NanoRoute (Place & Route)
+          - 13.1
+
+        * Synopsys Library Compiler (.lib/.db)
+          - 2012-06-SP5  
+        * SPICE Simulator (Extracted HSPICE netlist)
+          - 2013.12-SP2 
+        * Mentor Calibre  £¨extract netlists£©
+           -2015.3_25.16
+
+        * Cadence NC-Sim (Verilog)
+          - 10.2
+        * Synopsys VCS (Verilog)
+          - vcs_2014.03-SP1-7 
+        * Mentor ModelSim (Verilog)
+          - 6.5
+        * Synopsys PrimeTime (Static Timing, Delay Calculation)
+          - 2014.12-SP3
+        * Synopsys IC Compiler (Place & Route) 
+	  - ICC_2013.03-SP2
+        * Synopsys Design Compiler
+          - 2013.03-SP2  
+   	* Crossfire 
+      	  -v5.1.17.0515
+
+        ++ Mentor Graphics Calibre (GDSII, CDL) 
+          - 2014.4_18.13
+        * Cadence Composer (Schematic Entry)
+          - IC5141USR6
+
+
+4> DK UPDATE HISTORY:
+-----------------------------------------------------------------------------------
+   Version   	Date            Item
+   =======   	===========     ===========================================================
+
+	v0.0    2013-9-26   	Initial Release.
+
+	V0.1  	2014-12-31  	CDK update base on the latest spice model/DRC
+
+   	v0.2    2015-11-13  	1.GDS update (add DEL2 and DEL4 cells)
+      				2.CDK update since spice model and gds update
+
+    	v0.3 	2016-11-21 	1.fix F_DIODEUHD2 drc violation
+   				2.follow low power flow 
+
+	v0.4 	2017-6-30	CDK update
+				1. gds update to add 57 new cells, which are clk-gating, DFF, combination logic cells
+				2. Cell name update for consistance between all DK
+				3. Add DK of APL, voltagestorm, noise model, cadence oa symbol format
+				4. For matching NCverilog backannotation , verilog timing arc need to update.
+
+	v0.4a   2017-11-17  	1. Add 1.8/5V platform tf and phy_lib
+				2. Update X state in .lib and .v (change"==="to"==")  to  increase the support of the unstable state signal 
+				
+   =======  	===========    ===========================================================
+
+5> CONTENTS:                                 DETAILS
+-----------------------------------------------------------------------------------
+./scc018ug_uhd_rvt_v0p4a.note     	Release notes
+
+astro/                                  Astro views,including the antenna information in CLF format,wire track definition,mapping file.
+
+ cell_list                              Cell list of this  library
+
+ cdl/
+    scc018ug_uhd_rvt.cdl          	LVS netlist
+
+ doc/
+    scc018ug_uhd_rvt.pdf          	Datasheet
+
+ fastscan/
+    scc018ug_uhd_rvt.atpg         	ATPG pattern for fastscan
+
+phy_lib/                               	Physical library
+
+ symbol/                                synopsys Symbol for design vision
+
+ cdn_symbol/                            Cadence Symbol for composer
+
+ gds/
+    scc018ug_uhd_rvt.gds          	GDS database
+
+ lef/
+    tf/                                 Tech file of lef
+    macro/                              Cadence P&R library (two files included,with and without antenna information respectively)
+
+ liberty/                               
+    1.2v/                             	1.2v Timing model
+    1.8v/                             	1.8v Timing model
+
+ cdb/                                   Celtic noise database
+
+ verilog/
+    scc018ug_uhd_rvt.v            	Verilog model for positive timing check and function verification
+    scc018ug_uhd_rvt_neg.v        	Verilog model for negative timing check and function verification
+    scc018ug_uhd_rvt_pg.v         	Verilog model for positive timing check and function verification with power pin
+    scc018ug_uhd_rvt_neg_pg.v     	Verilog model for negative timing check and function verification with power pin
+
+ voltagestorm/				IR drop analysis	
+
+ apl/					apache power library
+
+
+6> PROBLEMS & SOLUTIONS:
+-----------------------------------------------------------------------------------
+This section describes known problems and work-arounds as of the release date of this library.
+
+  a, Filler cell issue
+     The dummy AA & GT can't be inserted automatically using the dummy insertion script as
+     the NWELL in digital  block  can't meet the insertion requirements,and the low AA & GT
+     density will lower the process yield
+   * Solution
+   - the filler cells in this package were updated with filling dummy AA & GT to
+     meet density requirement, it's a must to replace the filler cells in your
+     design with these ones
+   - During filler cell insertion, you should begin by filling gaps with the largest Filler
+     cell available, progressively moving downward in size as gaps are filled until the final
+     gaps are filled by smallest Filler cell. Please note that F_FILL1 have no dummy
+     AA & GT.
+
+  b, LVS guidance
+     All std cells will have LVS violations when LVS is run on the cells in isolation because there
+     is no direct well/substract connection.  All LVS errors will disappear when each cell is abutted next
+     to another cell as in a real design, and at least one well/substract connection cell (FILLTIE) is placed for each routing row.
+
+  c, PR tech file
+     As on this process node we support extra top metal options such as RDL(Re-Distribution Layer),
+     Thick top metal and Thin top metal,we need to describe the P&R tech files in several combinations so that 
+     you or your engineer can implement the tech files corretly.
+
+   d,note
+     As clock tree needs very high accuracy timing and skew balance, we strongly recommend our customer to complete  clock tree with single Vt cells to 
+guarantee the timing  sign-off accuracy. And for 95n ULP process, we strongly recommend our customer to only use RVT std cells for clock tree.
+     We suggest do not use DEL* Cell in clock tree. Those DEL* Cells are expected to fix hold time violation on data-path. We suggest to use CLK* Cell in 
+clock tree.
+
+   e, DRC violation
+     User could waive the following DRC false errors, as they will disappear in the chip level check  after APR flow
+
+180MSE_1833,
+RULECHECK GT_12 ....................... TOTAL Result Count = 1    (1)
+RULECHECK M1_7 ........................ TOTAL Result Count = 1    (1)
+
+180MS_1850,
+RULECHECK GT_12 ....................... TOTAL Result Count = 1    (1)
+RULECHECK M1_7 ........................ TOTAL Result Count = 1    (1)
+
+180BCD_EPI,
+RULECHECK GT_12 ....................... TOTAL Result Count = 1    (1)
+RULECHECK M1_7 ........................ TOTAL Result Count = 1    (1)
+
+lvs :
+F_DIODENUHD2 and F_DIODEUHD2 cell level lvs fail on 1.8/5v LVS runset, but will disappear in chip level, the runset will be updated
+
+DATATYPES_PER_LAYER_USED
+10:0,14:0,30:0,40:0,43:0,50:0,61:0,63:63,127:0,138:0,141:0,161:0,162:0
+
