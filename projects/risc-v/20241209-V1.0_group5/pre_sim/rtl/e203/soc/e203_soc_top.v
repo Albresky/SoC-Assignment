@@ -18,7 +18,7 @@
                                                                          
 module e203_soc_top(
 
-    // This clock should comes from the crystal pad generated high speed clock (16MHz)
+  // This clock should comes from the crystal pad generated high speed clock (16MHz)
   input  hfextclk,
   output hfxoscen,// The signal to enable the crystal pad generated clock
 
@@ -82,9 +82,12 @@ module e203_soc_top(
   // dwakeup is input need to be pull-up by default
   input  io_pads_aon_pmu_dwakeup_n_i_ival,
 
-      // PMU output is just output without enable
+  // PMU output is just output without enable
   output io_pads_aon_pmu_padrst_o_oval,
-  output io_pads_aon_pmu_vddpaden_o_oval 
+  output io_pads_aon_pmu_vddpaden_o_oval,
+
+  // Test mode output
+  output test_mode // New output for test mode
 );
 
 
@@ -204,7 +207,7 @@ module e203_soc_top(
   .io_pads_jtag_TRST_n_o_pue  (),
   .io_pads_jtag_TRST_n_o_ds   (),
 
-  .test_mode(1'b0),
+  .test_mode(test_mode), // Connect to output
   .test_iso_override(1'b0),
 
   .io_pads_gpioA_i_ival       (io_pads_gpioA_i_ival),

@@ -315,6 +315,8 @@ module tb_top();
   wire io_pads_qspi0_dq_2;
   wire io_pads_qspi0_dq_3;
 
+  wire test_mode = 1'b0;
+
   assign io_pads_qspi0_dq_0 = 1'b1;
   assign io_pads_qspi0_dq_1 = 1'b1;
   assign io_pads_qspi0_dq_2 = 1'b1;
@@ -355,7 +357,8 @@ module tb_top();
 
       .io_pads_aon_pmu_dwakeup_n_i_ival (1'b1),
       .io_pads_aon_pmu_padrst_o_oval    (),
-      .io_pads_aon_pmu_vddpaden_o_oval  ()
+      .io_pads_aon_pmu_vddpaden_o_oval  (),
+      .test_mode                        (test_mode)
   );
 
 
