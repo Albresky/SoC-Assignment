@@ -1,0 +1,13 @@
+# files
+novas.*
+*.log
+simv
+ucli.key
+
+# folders
+simv.daidir
+verdiLog
+csrc
+DVEfiles
+.vcs_checkpoint_*
+*.vpd
