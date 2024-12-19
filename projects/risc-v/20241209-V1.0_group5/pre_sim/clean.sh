@@ -1,0 +1,1 @@
+rm -rf csrc DVEfiles simv* ucli.key verdiLog *.vpd novas* vcs.log* .vcs_checkpoint*
