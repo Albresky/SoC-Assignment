@@ -1,6 +1,7 @@
 ../../../lib/SMIC180/MEM_IP_20MHz/RA1SHD8192X32/RA1SHD8192X32.v
 ../../../lib/SMIC180/MEM_IP_20MHz/RA1SHD8192X64/RA1SHD8192X64.v
 ../../../lib/SMIC180/SP018_V1.5b/SP018_V1p5b/SP018_V1p5b/verilog/SP018_V1p5a.v
+../../../lib/SMIC180/SCC018UG_UHD_RVT_V0p4a/verilog/scc018ug_uhd_rvt.v
 ./rtl/e203/soc/full_chip.v
 #./rtl/e203/core/config.v
 ./rtl/e203/core/e203_biu.v
