@@ -104,10 +104,9 @@ module e203_subsys_gfcm(
 
   // assign clkout = clk0_gated | clk1_gated;
   CLKOR2UHDV4 u_CLKOR2(
-    .Z  (hfclk    ), 
-    .I0 (gfcm_clk ),
-    .I1 (hfextclk ),
-    .S  (test_mode)
+    .Z  (clkout    ), 
+    .A1 (clk0_gate ),
+    .A2 (clk1_gated)
   );
 
 
