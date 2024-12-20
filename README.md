@@ -5,10 +5,10 @@ BUPT 片上集成系统分析与设计课程实践（2024.12）
 ## 目录结构
 
 ```bash
-shikai@ubuntu:~/SoC-Assignment$ tree -L 4 .
 .
 ├── doc
 │   ├── RISC-V微处理器芯片设计实践.docx
+│   ├── summary.pdf
 │   └── 评分规则.docx
 ├── projects
 │   ├── lib
@@ -49,7 +49,7 @@ shikai@ubuntu:~/SoC-Assignment$ tree -L 4 .
         ├── dc.tcl
         └── setup_dc.tcl
 
-25 directories, 16 files
+25 directories, 17 files
 ```
 
 ## 环境配置
