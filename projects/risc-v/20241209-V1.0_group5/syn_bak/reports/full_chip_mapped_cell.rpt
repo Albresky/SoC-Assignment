@@ -1,0 +1,314 @@
+ 
+****************************************
+Report : cell
+Design : full_chip
+Version: O-2018.06-SP1
+Date   : Thu Dec 19 23:05:35 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    r - removable
+   so - sizing only
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U71                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U72                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U73                       CLKINUHDV1      scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U75                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U76                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U77                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U78                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U79                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U80                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U91                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U92                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U93                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U94                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U95                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U96                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U97                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U98                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U99                       INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U100                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U101                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U102                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U103                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U104                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U105                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U106                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U107                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U108                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U109                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U110                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U111                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U112                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U113                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U114                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U115                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U116                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U117                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U118                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U119                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U120                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U121                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U122                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U123                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U124                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U125                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U126                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U127                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U128                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U129                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U130                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U131                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U132                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U133                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U134                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U135                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U136                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U137                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U138                      INUHDV0P4       scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+U139                      PULLUHD0        scc018ug_uhd_rvt_ss_v1p62_125c_basic
+                                                          5.644800  
+gpioA_0__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_1__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_2__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_3__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_4__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_5__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_6__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_7__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_8__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_9__u_pad_gpioAX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_10__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_11__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_12__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_13__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_14__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_15__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_16__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_17__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_18__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_19__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_20__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_21__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_22__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_23__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_24__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_25__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_26__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    d, n
+gpioA_27__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    d, n
+gpioA_28__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioA_29__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    d, n
+gpioA_30__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    d, n
+gpioA_31__u_pad_gpioAX    PB8             SP018_V1p4_max  8000.000000
+                                                                    d, n
+gpioB_0__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_1__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_2__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_3__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_4__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_5__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_6__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_7__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_8__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_9__u_pad_gpioBX     PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_10__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_11__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_12__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_13__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_14__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_15__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_16__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_17__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_18__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_19__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_20__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_21__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_22__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_23__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_24__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_25__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_26__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_27__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_28__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_29__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_30__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+gpioB_31__u_pad_gpioBX    PB8             SP018_V1p4_max  8000.000000
+                                                                    n
+u_e203_soc_top            e203_soc_top                    5378902.000677
+                                                                    b, h, n
+u_pad_hfextclk            PI              SP018_V1p4_max  8000.000000
+                                                                    d
+u_pad_hfxoscen            PO4             SP018_V1p4_max  8000.000000
+u_pad_io_pads_aon_erst_n_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+                                                                    d, so
+u_pad_io_pads_aon_pmu_dwakeup_n_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_aon_pmu_padrst_o_oval
+                          PO16            SP018_V1p4_max  8000.000000
+                                                                    d
+u_pad_io_pads_aon_pmu_vddpaden_o_oval
+                          PO16            SP018_V1p4_max  8000.000000
+                                                                    d
+u_pad_io_pads_bootrom_n_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_dbgmode0_n_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_dbgmode1_n_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_dbgmode2_n_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_jtag_TCK_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+                                                                    d
+u_pad_io_pads_jtag_TDI_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_jtag_TDO_o  POT16           SP018_V1p4_max  8000.000000
+                                                                    n
+u_pad_io_pads_jtag_TMS_i_ival
+                          PIU             SP018_V1p4_max  8000.000000
+u_pad_io_pads_qspi0_cs_0_o_oval
+                          PO16            SP018_V1p4_max  8000.000000
+u_pad_io_pads_qspi0_dq_0  PBCU16          SP018_V1p4_max  8000.000000
+                                                                    n
+u_pad_io_pads_qspi0_dq_1  PBCU16          SP018_V1p4_max  8000.000000
+                                                                    n
+u_pad_io_pads_qspi0_dq_2  PBCU16          SP018_V1p4_max  8000.000000
+                                                                    n
+u_pad_io_pads_qspi0_dq_3  PBCU16          SP018_V1p4_max  8000.000000
+                                                                    n
+u_pad_io_pads_qspi0_sck_o_oval
+                          PO16            SP018_V1p4_max  8000.000000
+u_pad_lfextclk            PI              SP018_V1p4_max  8000.000000
+                                                                    d
+u_pad_lfxoscen            PO4             SP018_V1p4_max  8000.000000
+--------------------------------------------------------------------------------
+Total 145 cells                                           6067229.399088
+1

@@ -1,0 +1,1 @@
+This directory contains the netlists from syn output.

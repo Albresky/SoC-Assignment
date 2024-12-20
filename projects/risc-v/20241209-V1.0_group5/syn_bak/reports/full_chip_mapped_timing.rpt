@@ -1,0 +1,200 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : full_chip
+Version: O-2018.06-SP1
+Date   : Thu Dec 19 23:05:35 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v1p62_125c   Library: scc018ug_uhd_rvt_ss_v1p62_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/vld_dfflr/qout_r_reg_0_
+              (rising edge-triggered flip-flop clocked by hfextclk)
+  Endpoint: u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/sync_gen_0__i_is_0_sync_dffr/qout_r_reg_0_
+            (rising edge-triggered flip-flop clocked by JTAG_CLK)
+  Path Group: JTAG_CLK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock hfextclk (rise edge)                                      950.00     950.00
+  clock network delay (ideal)                                       6.00     956.00
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/vld_dfflr/qout_r_reg_0_/CK (DRNQUHDV1)     1.00     0.00 #   956.00 r i 
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/vld_dfflr/qout_r_reg_0_/Q (DRNQUHDV1)     0.15     0.64   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/vld_dfflr/qout[0] (net)     4     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/vld_dfflr/qout[0] (sirv_gnrl_dfflr_DW1_150)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/o_vld (net)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/u_dm2dtm_cdc_tx/o_vld (sirv_gnrl_cdc_tx_DW36_SYNC_DP2)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/dtm_resp_valid (net)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/dtm_resp_valid (sirv_jtag_dtm_ASYNC_FF_LEVELS2)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/dtm_resp_valid (net)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/i_vld_a (sirv_gnrl_cdc_rx_DW36_SYNC_DP2)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/i_vld_a (net)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/din_a[0] (sirv_gnrl_sync_DP2_DW1_4)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/din_a[0] (net)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/sync_gen_0__i_is_0_sync_dffr/dnxt[0] (sirv_gnrl_dffr_DW1_12)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/sync_gen_0__i_is_0_sync_dffr/dnxt[0] (net)     0.00   956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/sync_gen_0__i_is_0_sync_dffr/qout_r_reg_0_/D (DRNQUHDV0P7)     0.15     0.00   956.64 r
+  data arrival time                                                          956.64
+
+  clock JTAG_CLK (rise edge)                                     1000.00    1000.00
+  clock network delay (ideal)                                       6.00    1006.00
+  clock uncertainty                                                -0.80    1005.20
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/jtag_dtm_gen_u_sirv_jtag_dtm/u_jtag2debug_cdc_rx/u_i_vld_sync/sync_gen_0__i_is_0_sync_dffr/qout_r_reg_0_/CK (DRNQUHDV0P7)     0.00  1005.20 r
+  library setup time                                               -0.13    1005.07
+  data required time                                                        1005.07
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                        1005.07
+  data arrival time                                                         -956.64
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                 48.43
+
+
+  Startpoint: u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/reg_0/q_reg
+              (rising edge-triggered flip-flop clocked by hfextclk)
+  Endpoint: u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/u_sirv_clint/ipi_0_reg
+            (rising-edge recovery check against clock hfextclk)
+  Path Group: hfextclk
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock hfextclk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                       6.00       6.00
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/reg_0/q_reg/CK (DRQUHDV1)     1.00     0.00 #     6.00 r i 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/reg_0/q_reg/Q (DRQUHDV1)     0.08     0.55     6.55 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/reg_0/q (net)     1     0.00     6.55 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/reg_0/q (sirv_AsyncResetReg_59)     0.00     6.55 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/io_q[0] (net)     0.00     6.55 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg/io_q[0] (sirv_AsyncResetRegVec_129_1)     0.00     6.55 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/reset_n_catch_reg_io_q[0] (net)     0.00     6.55 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/U3/ZN (INUHDV1)     0.06     0.06     6.62 f
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/T_9 (net)     1     0.00     6.62 f
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/U5/ZN (MUX2NUHDV2)     0.17     0.16     6.77 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/n1 (net)     1     0.00     6.77 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/U2/ZN (INUHDV1)     0.09     0.08     6.85 f d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/io_sync_reset (net)     1     0.00     6.85 f d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_main_ResetCatchAndSync_2_1/io_sync_reset (sirv_ResetCatchAndSync_2_1)     0.00     6.85 f
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/main_rst (net)     0.00     6.85 f d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/U3/ZN (CLKINUHDV3)  3179.89  1771.94 #  1778.79 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/main_rst_n (net)  6388     0.00  1778.79 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/rst_n (e203_subsys_clint)     0.00 #  1778.79 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/rst_n (net)     0.00  1778.79 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/rst_n (sirv_clint_top)     0.00 #  1778.79 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/rst_n (net)     0.00  1778.79 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/U4/ZN (CLKINUHDV3)     0.00  1091.14 #  2869.93 f d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/n_0_net_ (net)   159     0.00  2869.93 f d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/u_sirv_clint/reset (sirv_clint)     0.00  2869.93 f
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/u_sirv_clint/reset (net)     0.00  2869.93 f d 
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/u_sirv_clint/ipi_0_reg/RD (DRQUHDV0P7)     0.00     0.00  2869.93 f
+  data arrival time                                                         2869.93
+
+  clock hfextclk (rise edge)                                       50.00      50.00
+  clock network delay (ideal)                                       6.00      56.00
+  clock uncertainty                                                -0.80      55.20
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_subsys_clint/u_sirv_clint_top/u_sirv_clint/ipi_0_reg/CK (DRQUHDV0P7)     0.00    55.20 r
+  library recovery time                                            -0.16      55.04
+  data required time                                                          55.04
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                          55.04
+  data arrival time                                                        -2869.93
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                         -2814.89
+
+
+  Startpoint: u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/dm_halt_int_gen_0__dm_debint_dfflr/qout_r_reg_0_
+              (rising edge-triggered flip-flop clocked by hfextclk)
+  Endpoint: io_pads_aon_pmu_padrst_o_oval
+            (output port clocked by lfextclk)
+  Path Group: lfextclk
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock hfextclk (rise edge)                                    19950.00   19950.00
+  clock network delay (ideal)                                       6.00   19956.00
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/dm_halt_int_gen_0__dm_debint_dfflr/qout_r_reg_0_/CK (DRNQUHDV1)     1.00     0.00 # 19956.00 r i 
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/dm_halt_int_gen_0__dm_debint_dfflr/qout_r_reg_0_/Q (DRNQUHDV1)     0.15     0.64 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/dm_halt_int_gen_0__dm_debint_dfflr/qout[0] (net)     4     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/dm_halt_int_gen_0__dm_debint_dfflr/qout[0] (sirv_gnrl_dfflr_DW1_156)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/o_dbg_irq[0] (net)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_debug_module/o_dbg_irq[0] (sirv_debug_module_SUPPORT_JTAG_DTM1_ASYNC_FF_LEVELS2_PC_SIZE32_HART_NUM1_HART_ID_W1)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/dbg_irq_0_ (net)                 0.00   19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/dbg_irq_a (e203_subsys_main)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/dbg_irq_a (net)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/dbg_irq_a (e203_cpu_top)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/dbg_irq_a (net)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/dbg_irq_a (e203_cpu_MASTER1)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/dbg_irq_a (net)     0.00 19956.64 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/U3/Z (BUFUHDV0P4)     0.10     0.16 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/inspect_dbg_irq (net)     1     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/inspect_dbg_irq (e203_cpu_MASTER1)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/inspect_dbg_irq (net)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/inspect_dbg_irq (e203_cpu_top)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/inspect_dbg_irq (net)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/inspect_dbg_irq (e203_subsys_main)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/inspect_dbg_irq (net)            0.00   19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/inspect_dbg_irq (sirv_aon_top)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/inspect_dbg_irq (net)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/u_sirv_aon_wrapper/inspect_dbg_irq (sirv_aon_wrapper)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/u_sirv_aon_wrapper/inspect_dbg_irq (net)     0.00 19956.80 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/u_sirv_aon_wrapper/U166/Z (AO32UHDV1)     0.76     0.70 19957.49 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/u_sirv_aon_wrapper/io_pads_pmu_padrst_o_oval (net)     1     0.00 19957.49 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/u_sirv_aon_wrapper/io_pads_pmu_padrst_o_oval (sirv_aon_wrapper)     0.00 19957.49 r
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/io_pads_aon_pmu_padrst_o_oval (net)     0.00 19957.49 r d 
+  u_e203_soc_top/u_e203_subsys_top/u_sirv_aon_top/io_pads_aon_pmu_padrst_o_oval (sirv_aon_top)     0.00 19957.49 r
+  u_e203_soc_top/u_e203_subsys_top/io_pads_aon_pmu_padrst_o_oval (net)     0.00 19957.49 r d 
+  u_e203_soc_top/u_e203_subsys_top/io_pads_aon_pmu_padrst_o_oval (e203_subsys_top)     0.00 19957.49 r
+  u_e203_soc_top/io_pads_aon_pmu_padrst_o_oval (net)                0.00   19957.49 r    d 
+  u_e203_soc_top/io_pads_aon_pmu_padrst_o_oval (e203_soc_top)       0.00   19957.49 r
+  io_pads_aon_pmu_padrst_o_oval_pin (net)                           0.00   19957.49 r    d 
+  u_pad_io_pads_aon_pmu_padrst_o_oval/PAD (PO16)          2.41      1.99   19959.48 r    d 
+  io_pads_aon_pmu_padrst_o_oval (net)           1                   0.00   19959.48 r    d 
+  io_pads_aon_pmu_padrst_o_oval (out)                     1.92      0.00   19959.48 r
+  data arrival time                                                        19959.48
+
+  clock lfextclk (rise edge)                                    20000.00   20000.00
+  clock network delay (ideal)                                       6.00   20006.00
+  clock uncertainty                                                -0.80   20005.20
+  output external delay                                            -3.00   20002.20
+  data required time                                                       20002.20
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                       20002.20
+  data arrival time                                                        -19959.48
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                 42.72
+
+
+1
