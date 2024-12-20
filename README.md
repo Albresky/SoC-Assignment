@@ -57,7 +57,7 @@ BUPT 片上集成系统分析与设计课程实践（2024.12）
 从 [Release/Synopsys_tools_v2018.09](https://github.com/Albresky/SoC-Assignment/releases/tag/Synopsys_tools_v2018.09) 下载相关工具及补丁，虚拟机使用 Ubuntu 18.04。
 
 
-按照步骤参考 [实验报告](doc/summary.pdf) 进行配置。
+参考 [实验报告](doc/summary.pdf) 进行配置。
 
 ## 实验报告
 
