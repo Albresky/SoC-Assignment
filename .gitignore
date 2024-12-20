@@ -13,3 +13,12 @@ csrc
 DVEfiles
 .vcs_checkpoint_*
 *.vpd
+
+
+# syn
+alib-52
+netlist/*
+reports/*
+results/*
+WORK/*
+*.svf
