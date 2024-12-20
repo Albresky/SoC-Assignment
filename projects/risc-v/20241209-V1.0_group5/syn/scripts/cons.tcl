@@ -3,8 +3,8 @@ set 	CLK_HFEXTCLK_PERIOD 		50
 set 	CLK_LFEXTCLK_PERIOD 		20000	
 set 	CLK_JTAGCLK_PERIOD	 		1000	
 	                        		
-set 	CLK_SKEW_SETUP 			    0.5
-set 	CLK_SKEW_HOLD 			    0.5
+set 	CLK_SKEW_SETUP 			    0.8
+set 	CLK_SKEW_HOLD 			    0.7
 set 	CLK_SOURCE_LATENCY 			2
 set 	CLK_NETWORK_LATENCY 		4
 set 	CLK_TRAN 				    1
