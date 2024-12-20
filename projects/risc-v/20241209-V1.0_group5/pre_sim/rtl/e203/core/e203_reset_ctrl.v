@@ -95,14 +95,26 @@ endgenerate
  
    // The ITCM/DTCM clk and rst
    `ifdef E203_HAS_ITCM
- assign rst_itcm = rst_sync_n;
+//  assign rst_itcm = rst_sync_n;
+ CLKBUFUHDV4 u_buf_rst_itcm( 
+    .Z(rst_itcm   ),
+    .I(rst_sync_n )
+ );
    `endif
    `ifdef E203_HAS_DTCM
- assign rst_dtcm = rst_sync_n;
+//  assign rst_dtcm = rst_sync_n;
+ CLKBUFUHDV4 u_buf_rst_dtcm( 
+    .Z(rst_dtcm   ),
+    .I(rst_sync_n )
+ );
    `endif
  
    // The Top always on clk and rst
- assign rst_aon = rst_sync_n;
+//  assign rst_aon = rst_sync_n;
+ CLKBUFUHDV4 u_buf_rst_aon(
+  .Z(rst_aon    ),
+  .I(rst_sync_n )
+ );
 
 endmodule
 

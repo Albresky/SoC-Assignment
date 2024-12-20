@@ -3599,7 +3599,11 @@ module sirv_aon(
   assign io_in_0_d_bits_data = T_992_bits_data;
   assign io_in_0_d_bits_error = T_10873_error;
   assign io_in_0_e_ready = 1'h1;
-  assign io_lfclk = io_lfextclk;
+  // assign io_lfclk = io_lfextclk;
+   CLKBUFUHDV4 u_buf_io_lfclk( 
+    .Z(io_lfclk     ),
+    .I(io_lfextclk  )
+ );
 
   // In DFT mode the internal generated reset siganls should be disabled
   assign io_moff_hfclkrst = test_mode ? erst : pmu_io_control_hfclkrst;

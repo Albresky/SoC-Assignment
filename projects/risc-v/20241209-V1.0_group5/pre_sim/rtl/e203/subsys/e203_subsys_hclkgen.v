@@ -115,7 +115,11 @@ module e203_subsys_hclkgen(
     .S  (test_mode)
   );
 
-  assign inspect_16m_clk = hfextclk ;
+  // assign inspect_16m_clk = hfextclk ;
+  CLKBUFUHDV4 u_buf_inspect_16m_clk(
+    .Z(inspect_16m_clk),
+    .I(hfextclk       )
+  );
   assign inspect_pll_clk = plloutclk;
 
 endmodule

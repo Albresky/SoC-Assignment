@@ -890,7 +890,11 @@ module e203_cpu #(
   assign inspect_mem_cmd_ready = mem_icb_cmd_ready;
   assign inspect_mem_rsp_valid = mem_icb_rsp_valid;
   assign inspect_mem_rsp_ready = mem_icb_rsp_ready;
-  assign inspect_core_clk   = clk;
+  // assign inspect_core_clk   = clk;
+   CLKBUFUHDV4 u_buf_inspect_core_clkm( 
+    .Z(inspect_core_clk ),
+    .I(clk              )
+ );
   assign core_csr_clk       = clk_core_exu;
 
 endmodule

@@ -59,7 +59,11 @@ module sirv_jtaggpioport(
 );
   wire  T_101;
   wire  T_117;
-  assign io_jtag_TCK = T_101;
+  // assign io_jtag_TCK = T_101;
+   CLKBUFUHDV4 u_buf_io_jtag_TCK( 
+    .Z(io_jtag_TCK  ),
+    .I(T_101        )
+ );
   assign io_jtag_TMS = io_pins_TMS_i_ival;
   assign io_jtag_TDI = io_pins_TDI_i_ival;
   assign io_jtag_TRST = T_117;

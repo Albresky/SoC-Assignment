@@ -159,6 +159,9 @@ module apb_uart_sv
     // UART Registers
     // register write and update logic
     always @(*) begin
+
+        fifo_tx_data  = 0;
+
         regs_n          = regs_q;
         trigger_level_n = trigger_level_q;
 

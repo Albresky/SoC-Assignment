@@ -48,6 +48,10 @@ module e203_subsys_pll(
       assign pllout = pllrefclk;
   `endif//}
 
-  assign plloutclk = pllout;
+//   assign plloutclk = pllout;
+  CLKBUFUHDV4 u_buf_plloutclk(
+    .Z(plloutclk   ),
+    .I(pllout      )
+  );
 endmodule
 

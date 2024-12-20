@@ -338,7 +338,11 @@ module sirv_aon_wrapper(
   wire porrst = ~porrst_n;
   assign aon_io_resetCauses_porrst = porrst;
   
-  assign inspect_32k_clk = aon_io_lfextclk;
+  // assign inspect_32k_clk = aon_io_lfextclk;
+   CLKBUFUHDV4 u_buf_inspect_32k_clk( 
+    .Z(inspect_32k_clk  ),
+    .I(aon_io_lfextclk  )
+ );
 
 
   assign erst = ~ io_pads_erst_n_i_ival;

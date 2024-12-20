@@ -148,7 +148,11 @@ module e203_clk_ctrl (
 
 
   // The Top always on clk and rst
-  assign clk_aon = clk;
+  // assign clk_aon = clk;
+   CLKBUFUHDV4 u_buf_clk_aon( 
+    .Z(clk_aon  ),
+    .I(clk      )
+ );
 
 endmodule
 
